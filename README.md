@@ -6,24 +6,24 @@ It’s a beautiful spring day, and it’s been two weeks since you were hired as
 
 In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, you will perform **data modeling**, **data engineering**, and **data analysis**.
 
-## Performed in this assignment:
+# Performed in this assignment:
 
  - Climate Analysis and Exploration
  - Precipitation Analysis
  - Station Analysis
  - Climate App
 
-## Step 1 - Climate Analysis and Exploration
+# Step 1 - Climate Analysis and Exploration
 
 Python and SQLAlchemy was used to do basic climate analysis and data exploration of a climate database. The analysis was completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-# Precipitation Analysis
+## Precipitation Analysis
 
 Query designed to retrieve the last 12 months of precipitation data.
 
 ![2](https://user-images.githubusercontent.com/108673720/193393180-056dc960-7906-4309-9dba-cdc0956bffde.png)
 
-# Station Analysis
+## Station Analysis
 
 Query designed to calculate the total number of stations.
 
@@ -31,11 +31,11 @@ Query designed to calculate the total number of stations.
 
 - - -
 
-## Step 2 - Climate App
+# Step 2 - Climate App
 
 Flask API designed based on the queries developed during the inital step.
 
-# Routes
+## Routes
 ```
     /api/v1.0/tobs
     
@@ -44,7 +44,7 @@ Flask API designed based on the queries developed during the inital step.
     /api/v1.0/(start)/(end)
 ```
 
-# Script
+## Script
 ```
 import numpy as np
 import pandas as pd
