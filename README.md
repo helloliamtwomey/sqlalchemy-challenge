@@ -6,7 +6,7 @@ It’s a beautiful spring day, and it’s been two weeks since you were hired as
 
 In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, you will perform **data modeling**, **data engineering**, and **data analysis**.
 
-# Performed in this assignment:
+## Performed in this assignment:
 
  - Climate Analysis and Exploration
  - Precipitation Analysis
