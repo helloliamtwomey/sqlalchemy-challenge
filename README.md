@@ -1,4 +1,4 @@
-# SQL: Employee Database
+# SQLAlchemy: Data Analysis
 
 ## Background
 
