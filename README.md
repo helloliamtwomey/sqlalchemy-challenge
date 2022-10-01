@@ -20,11 +20,13 @@ Python and SQLAlchemy was used to do basic climate analysis and data exploration
 # Precipitation Analysis
 
 Query designed to retrieve the last 12 months of precipitation data.
+
 ![2](https://user-images.githubusercontent.com/108673720/193393180-056dc960-7906-4309-9dba-cdc0956bffde.png)
 
 # Station Analysis
 
 Query designed to calculate the total number of stations.
+
 ![1](https://user-images.githubusercontent.com/108673720/193393205-3ad2aae7-1197-4826-9abc-dd0270df49c5.png)
 
 - - -
