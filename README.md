@@ -89,7 +89,3 @@ Now that you have completed your initial analysis, design a Flask API based on t
 * You will need to join the station and measurement tables for some of the analysis queries.
 
 * Use Flask `jsonify` to convert your API data into a valid JSON response object.
-
-## Copyright
-
-Data Boot Camp ©2018. All Rights Reserved.
