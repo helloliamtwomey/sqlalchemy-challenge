@@ -1,91 +1,43 @@
-# sqlalchemy-challenge
+# SQL: Employee Database
 
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
+## Background
+
+It’s a beautiful spring day, and it’s been two weeks since you were hired as a new data engineer at Pewlett Hackard. Your first major task is a research project on employees of the corporation from the 1980s and 1990s. All that remains of the database of employees from that period are six CSV files.
+
+In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, you will perform **data modeling**, **data engineering**, and **data analysis**.
+
+## Performed in this assignment:
+
+ - Climate Analysis and Exploration
+ - Precipitation Analysis
+ - Station Analysis
+ - Climate App
 
 ## Step 1 - Climate Analysis and Exploration
 
-To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+Python and SQLAlchemy was used to do basic climate analysis and data exploration of a climate database. The analysis was completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Use the provided [starter notebook](climate_starter.ipynb) and [hawaii.sqlite](Resources/hawaii.sqlite) files to complete your climate analysis and data exploration.
+# Precipitation Analysis
 
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
+Query designed to retrieve the last 12 months of precipitation data.
+![2](https://user-images.githubusercontent.com/108673720/193393180-056dc960-7906-4309-9dba-cdc0956bffde.png)
 
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
+# Station Analysis
 
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
-
-### Precipitation Analysis
-
-* Design a query to retrieve the last 12 months of precipitation data.
-
-* Select only the `date` and `prcp` values.
-
-* Load the query results into a Pandas DataFrame and set the index to the date column.
-
-* Sort the DataFrame values by `date`.
-
-* Plot the results using the DataFrame `plot` method.
-
-![2](https://user-images.githubusercontent.com/108673720/193392879-13233b13-1197-4983-9512-ce85d17879f1.png)
-
-* Use Pandas to print the summary statistics for the precipitation data.
-
-### Station Analysis
-
-* Design a query to calculate the total number of stations.
-
-* Design a query to find the most active stations.
-
-  * List the stations and observation counts in descending order.
-
-  * Which station has the highest number of observations?
-
-  * Hint: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
-
-* Design a query to retrieve the last 12 months of temperature observation data (tobs).
-
-  * Filter by the station with the highest number of observations.
-
-  * Plot the results as a histogram with `bins=12`.
-
-![1](https://user-images.githubusercontent.com/108673720/193392883-5c0f7b4e-dc62-4c44-a3ac-1532258c848b.png)
+Query designed to calculate the total number of stations.
+![1](https://user-images.githubusercontent.com/108673720/193393205-3ad2aae7-1197-4826-9abc-dd0270df49c5.png)
 
 - - -
 
 ## Step 2 - Climate App
 
-Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
+Flask API designed based on the queries developed during the inital step.
 
-* Use FLASK to create your routes.
-
-### Routes
-
-* `/api/v1.0/precipitation`
-
-  * Query for the dates and temperature observations from the last year.
-
-  * Convert the query results to a Dictionary using `date` as the key and `tobs` as the value.
-
-  * Return the JSON representation of your dictionary.
-
-* `/api/v1.0/stations`
-
-  * Return a JSON list of stations from the dataset.
-
-* `/api/v1.0/tobs`
-
-  * Return a JSON list of Temperature Observations (tobs) for the previous year.
-
-* `/api/v1.0/<start>` and `/api/v1.0/<start>/<end>`
-
-  * Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.
-
-  * When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
-
-  * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
-
-## Hints
-
-* You will need to join the station and measurement tables for some of the analysis queries.
-
-* Use Flask `jsonify` to convert your API data into a valid JSON response object.
+# Routes
+```
+    /api/v1.0/tobs
+    
+    /api/v1.0/(start)
+    
+    /api/v1.0/(start)/(end)
+```
